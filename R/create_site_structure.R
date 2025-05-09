@@ -110,7 +110,7 @@ create_site_structure <- function(type, subfolder = ".") {
     "    toc: TRUE",
     "---",
     "",
-    "# Header",
+    "## Header",
     "",
     "## Subheader"
   )
@@ -294,20 +294,20 @@ create_site_structure <- function(type, subfolder = ".") {
         additional_content <- switch(file,
                                      "index.qmd" = {
                                        c(
-                                         "# Introduction",
+                                         "## Introduction",
                                          "Welcome to the ___ project website. This is a private, password-protected website that should not be shared externally.",
                                          "This section provides a comprehensive introduction to the project, detailing the scope and goals of ___.",
                                          "",
 
-                                         "# Objectives",
+                                         "## Objectives",
                                          "Details of the project's primary goals and expected outcomes. This may include reducing recidivism, optimizing justice system resources, and enhancing public safety.",
                                          "",
 
-                                         "# Key Questions",
+                                         "## Key Questions",
                                          "What are the major challenges the project aims to address?",
                                          "",
 
-                                         "# Project Links",
+                                         "## Project Links",
                                          "Access to project resources and repositories is critical for team collaboration and transparency. Below are the links to key project tools and platforms:",
                                          "",
                                          "- **SharePoint**: [Link to the project's files](#)",
@@ -315,7 +315,7 @@ create_site_structure <- function(type, subfolder = ".") {
                                          "- **Asana**: [Link to the project's Asana page](#)",
                                          "",
 
-                                         "# Stakeholders",
+                                         "## Stakeholders",
                                          "This project involves collaboration between multiple stakeholders, including government agencies, community organizations, and justice system partners. This section lists key stakeholders and describes their roles and contributions to the project.",
                                          "",
                                          ""
@@ -323,59 +323,59 @@ create_site_structure <- function(type, subfolder = ".") {
                                      },
                                      "executive_summary.qmd" = {
                                        c(
-                                         "# Executive Summary"
+                                         "## Executive Summary"
                                        )
                                      },
                                      "analysis.qmd" = {
                                        c(
-                                         "# Analysis"
+                                         "## Analysis"
                                        )
                                      },
                                      "analysis_plan.qmd" = {
                                        c(
-                                         "# Analysis Plan"
+                                         "## Analysis Plan"
                                        )
                                      },
                                      "decision_making.qmd" = {
                                        c(
-                                         "# About This Page",
+                                         "## About This Page",
                                          "Documentation of the foundational decisions made about data handling, analysis, and overall research approach.",
                                          "",
 
-                                         "# Methodological Decisions",
+                                         "## Methodological Decisions",
                                          "A breakdown of critical rules and decisions that guide the project's analytical framework.",
                                          "",
 
-                                         "# Data Cleaning Decisions",
+                                         "## Data Cleaning Decisions",
                                          "Specific methods and criteria applied to clean and prepare the data for analysis.",
                                          ""
                                        )
                                      },
                                      "data_codebooks.qmd" = {
                                        c(
-                                         "# About This Page",
+                                         "## About This Page",
                                          "Detailed descriptions of all datasets, variables, and classifications used in the project.",
                                          "",
-                                         "# File 1 Codebook",
+                                         "## File 1 Codebook",
                                          "",
-                                         "# File 2 Codebook"
+                                         "## File 2 Codebook"
                                        )
                                      },
                                      "data_diagram.qmd" = {
                                        c(
-                                         "# About This Page",
+                                         "## About This Page",
                                          "Schematic representations showing how various datasets are interconnected and merged for analysis."
                                        )
                                      },
                                      "contact.qmd" = {
                                        c(
-                                         "# About This Page",
+                                         "## About This Page",
                                          "Information for contacting project team members.",
                                          "",
-                                         "# Team",
+                                         "## Team",
                                          "Names and roles of the project team members.",
                                          "",
-                                         "# Reach Out",
+                                         "## Reach Out",
                                          "Contact details for further communication."
                                        )
                                      },
