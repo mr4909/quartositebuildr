@@ -13,7 +13,7 @@
 #' unintended directory changes. The function then proceeds to create a series
 #' of directories and files:
 #'
-#' - Directories for R, site content (_site), logos, and fonts are created.
+#' - Directories for R, site content (_site), logos are created.
 #'
 #' - A custom CSS file (`styles.css`) is generated, pre-populated with basic
 #'   styling and custom fonts.
@@ -127,7 +127,7 @@ create_site_structure <- function(type, subfolder = ".") {
                        "contact.qmd")
 
   # Define directories to create
-  dirs_to_create <- c("R", "_site", "fonts", "img")
+  dirs_to_create <- c("R", "_site", "img")
 
   # Create directories
   for (dir in dirs_to_create) {
@@ -155,15 +155,6 @@ create_site_structure <- function(type, subfolder = ".") {
   logo_dest <- file.path(subfolder, "img", "code_for_america_black.jpg")
   file.copy(logo_src, logo_dest)
   cat("code_for_america_black.jpg copied to img folder.\n")
-
-  # Copy GT-America-Standard-Regular.ttf to the fonts folder
-  font_src <- cfa_sys_file("fonts/GT-America-Standard-Regular.ttf")
-  if (font_src == "") {
-    stop("GT-America-Standard-Regular.ttf not found in the inst/fonts directory.")
-  }
-  font_dest <- file.path(subfolder, "fonts", "GT-America-Standard-Regular.ttf")
-  file.copy(font_src, font_dest)
-  cat("GT-America-Standard-Regular.ttf copied to fonts folder.\n")
 
   # Create .gitignore file if it doesn't exist
   gitignore_path <- file.path(subfolder, ".gitignore")
@@ -211,47 +202,40 @@ create_site_structure <- function(type, subfolder = ".") {
 
   # CSS styling
   css_content <- c(
-    ":root {",
-    "  --main-color: #263C4B; /* Define your menu bar color here */",
-    "  --hover-bg-color: white; /* Define your hover background color here */",
-    "  --hover-font-color: #263C4B; /* Define your hover font color here */",
-    "}",
+    "/* styles.css */",
+    "",
+    "/* Import Source Sans 3 from Google Fonts */",
+    "@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');",
+    "",
+    "/* Apply font site-wide */",
     "body {",
-    "  max-width: 1400px; /* Set the maximum width */",
-    "  margin: 0 auto;",
+    "  font-family: \"Source Sans 3\", sans-serif;",
+    "  margin: 0;",
+    "  padding: 0;",
     "}",
     "",
-    "/* Header styles with gray bottom border */",
-    "  h1{",
-    "    border-bottom: 5px solid #d3d3d3; /* Gray line */",
-    "    padding-bottom: 10px; /* Space between text and line */",
-    "  }",
-    ".title, h1.title {",
-    "  border-bottom: 5px solid #fff;",
-    "}",
-    "/* Add fonts*/",
-    "@font-face {",
-    "  font-family: 'GT America';",
-    "  src: local('GT America'), url('fonts/GT-America-Standard-Regular.ttf');",
+    "/* Style for navigation menu */",
+    ".navbar,",
+    ".navbar-dark {",
+    "  background-color: #2b1a78 !important;",
     "}",
     "",
-    "/* Remove rounded edges on everything */",
-    "*{",
-    "  border-radius: 0!important;",
+    "/* Adjust text color in navbar */",
+    ".navbar .navbar-brand,",
+    ".navbar .nav-link,",
+    ".navbar .navbar-nav .nav-link {",
+    "  color: white !important;",
     "}",
     "",
-    "/* Change font throughout website */",
-    "html, body {",
-    "  font-family: 'GT America', sans-serif;",
-    "  color: black!important;",
+    "/* Bold active menu item */",
+    ".navbar .nav-item.active .nav-link,",
+    ".navbar .nav-link.active {",
+    "  font-weight: 600;",
     "}",
     "",
-    ".title {",
-    "  font-size: 2.5em;",
-    "  font-family: 'GT America';",
-    "  font-weight: bold;",
-    "  text-align: center;",
-    "  color: black;",
+    "/* Improve spacing and hover states */",
+    ".navbar .nav-link:hover {",
+    "  text-decoration: underline;",
     "}"
   )
 

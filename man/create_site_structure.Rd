@@ -31,7 +31,7 @@ Upon execution, the user is prompted to confirm the creation process to avoid
 unintended directory changes. The function then proceeds to create a series
 of directories and files:
 \itemize{
-\item Directories for R, site content (_site), logos, and fonts are created.
+\item Directories for R, site content (_site), logos are created.
 \item A custom CSS file (\code{styles.css}) is generated, pre-populated with basic
 styling and custom fonts.
 \item A set of Quarto markdown files (\code{.qmd}) are created for various sections
