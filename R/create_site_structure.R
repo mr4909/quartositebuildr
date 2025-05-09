@@ -112,7 +112,7 @@ create_site_structure <- function(type, subfolder = ".") {
     "",
     "## Header",
     "",
-    "## Subheader"
+    "### Subheader"
   )
 
   # Identify qmd files to create
@@ -121,9 +121,7 @@ create_site_structure <- function(type, subfolder = ".") {
                        "executive_summary.qmd",
                        "analysis.qmd",
                        "analysis_plan.qmd",
-                       "decision_making.qmd",
                        "data_codebooks.qmd",
-                       "data_diagram.qmd",
                        "contact.qmd")
 
   # Define directories to create
@@ -236,6 +234,42 @@ create_site_structure <- function(type, subfolder = ".") {
     "/* Improve spacing and hover states */",
     ".navbar .nav-link:hover {",
     "  text-decoration: underline;",
+    "}",
+    "",
+    "/* Uniform dropdown style */",
+    ".dropdown-menu {",
+    "  background-color: white;",
+    "  border: 1px solid #ccc;",
+    "  border-radius: 0px;",
+    "  padding: 0;",
+    "  box-shadow: none !important;",
+    "  margin-top: 8px;",
+    "  min-width: 200px;",
+    "}",
+    "",
+    "/* Dropdown items */",
+    ".dropdown-item {",
+    "  padding: 10px 16px;",
+    "  font-weight: 400;",
+    "  color: #2b1a78;",
+    "  border-radius: 0;",
+    "  transition: background-color 0.2s ease;",
+    "}",
+    "",
+    "/* Hover effect */",
+    ".dropdown-item:hover {",
+    "  background-color: #f1f1f1;",
+    "  color: #2b1a78;",
+    "}",
+    "",
+    "/* Ensure consistent border radius on first/last items */",
+    ".dropdown-item:first-child {",
+    "  border-top-left-radius: 0px;",
+    "  border-top-right-radius: 0px;",
+    "}",
+    ".dropdown-item:last-child {",
+    "  border-bottom-left-radius: 0px;",
+    "  border-bottom-right-radius: 0px;",
     "}"
   )
 
@@ -272,9 +306,7 @@ create_site_structure <- function(type, subfolder = ".") {
     "executive_summary.qmd"          = "Executive Summary",
     "analysis.qmd"                   = "Analysis",
     "analysis_plan.qmd"              = "Analysis Plan",
-    "decision_making.qmd"            = "Decision Making",
     "data_codebooks.qmd"             = "Codebooks",
-    "data_diagram.qmd"               = "Data Diagram",
     "contact.qmd"                    = "Contact"
   )
 
@@ -336,21 +368,6 @@ create_site_structure <- function(type, subfolder = ".") {
                                          "## Analysis Plan"
                                        )
                                      },
-                                     "decision_making.qmd" = {
-                                       c(
-                                         "## About This Page",
-                                         "Documentation of the foundational decisions made about data handling, analysis, and overall research approach.",
-                                         "",
-
-                                         "## Methodological Decisions",
-                                         "A breakdown of critical rules and decisions that guide the project's analytical framework.",
-                                         "",
-
-                                         "## Data Cleaning Decisions",
-                                         "Specific methods and criteria applied to clean and prepare the data for analysis.",
-                                         ""
-                                       )
-                                     },
                                      "data_codebooks.qmd" = {
                                        c(
                                          "## About This Page",
@@ -359,12 +376,6 @@ create_site_structure <- function(type, subfolder = ".") {
                                          "## File 1 Codebook",
                                          "",
                                          "## File 2 Codebook"
-                                       )
-                                     },
-                                     "data_diagram.qmd" = {
-                                       c(
-                                         "## About This Page",
-                                         "Schematic representations showing how various datasets are interconnected and merged for analysis."
                                        )
                                      },
                                      "contact.qmd" = {
@@ -423,22 +434,16 @@ create_site_structure <- function(type, subfolder = ".") {
     "  favicon: img/favicon.png",
     "  navbar:",
     "    right:",
-    "      - text: \"Project and Analysis Plan\"",
+    "      - text: \"Project Overview\"",
     "        href: index.html",
     "      - text: \"Executive Summary\"",
     "        href: executive_summary.html",
     "      - text: \"Analysis\"",
     "        href: analysis.html",
-    "      - text: \"Research\"",
-    "        menu:",
-    "          - text: \"Analysis Plan\"",
-    "            href: analysis_plan.html",
-    "          - text: \"Decision Making\"",
-    "            href: decision_making.html",
-    "          - text: \"Codebooks\"",
-    "            href: data_codebooks.html",
-    "          - text: \"Data Diagram\"",
-    "            href: data_diagram.html",
+    "      - text: \"Analysis Plan\"",
+    "        href: analysis_plan.html",
+    "      - text: \"Codebooks\"",
+    "        href: data_codebooks.html",
     "      - text: \"Contact\"",
     "        href: contact.html",
     "      - text: \"Github\"",
