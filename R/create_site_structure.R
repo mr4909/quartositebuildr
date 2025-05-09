@@ -156,14 +156,14 @@ create_site_structure <- function(type, subfolder = ".") {
   file.copy(logo_src, logo_dest)
   cat("code_for_america_black.jpg copied to img folder.\n")
 
-  # Copy Franklin_Gothic_Book_Regular.ttf to the fonts folder
-  font_src <- cfa_sys_file("fonts/Franklin_Gothic_Book_Regular.ttf")
+  # Copy GT-America-Standard-Regular.ttf to the fonts folder
+  font_src <- cfa_sys_file("fonts/GT-America-Standard-Regular.ttf")
   if (font_src == "") {
-    stop("Franklin_Gothic_Book_Regular.ttf not found in the inst/fonts directory.")
+    stop("GT-America-Standard-Regular.ttf not found in the inst/fonts directory.")
   }
-  font_dest <- file.path(subfolder, "fonts", "Franklin_Gothic_Book_Regular.ttf")
+  font_dest <- file.path(subfolder, "fonts", "GT-America-Standard-Regular.ttf")
   file.copy(font_src, font_dest)
-  cat("Franklin_Gothic_Book_Regular.ttf copied to fonts folder.\n")
+  cat("GT-America-Standard-Regular.ttf copied to fonts folder.\n")
 
   # Create .gitignore file if it doesn't exist
   gitignore_path <- file.path(subfolder, ".gitignore")
@@ -231,8 +231,8 @@ create_site_structure <- function(type, subfolder = ".") {
     "}",
     "/* Add fonts*/",
     "@font-face {",
-    "  font-family: 'Franklin Gothic';",
-    "  src: local('Franklin Gothic'), url('fonts/Franklin_Gothic_Book_Regular.ttf');",
+    "  font-family: 'GT America';",
+    "  src: local('GT America'), url('fonts/GT-America-Standard-Regular.ttf');",
     "}",
     "",
     "/* Remove rounded edges on everything */",
@@ -242,13 +242,13 @@ create_site_structure <- function(type, subfolder = ".") {
     "",
     "/* Change font throughout website */",
     "html, body {",
-    "  font-family: 'Franklin Gothic Book', sans-serif;",
+    "  font-family: 'GT America', sans-serif;",
     "  color: black!important;",
     "}",
     "",
     ".title {",
     "  font-size: 2.5em;",
-    "  font-family: 'Franklin Gothic Book';",
+    "  font-family: 'GT America';",
     "  font-weight: bold;",
     "  text-align: center;",
     "  color: black;",

@@ -34,7 +34,7 @@ To install the package from GitHub:
 # Install remotes if needed
 install.packages("remotes")
 
-# Replace 'yourusername' with the GitHub repo owner
+# Install quartositebuildr
 remotes::install_github("mr4909/quartositebuildr")
 ```
 
@@ -55,21 +55,22 @@ You’ll be prompted to confirm creation before anything is written.
 
 Running the function will generate a folder like this:
 
-my_project_site/ 
-├── R/ 
-├── _site/ 
-├── fonts/ 
-├── img/ 
-├── styles.css
-├── .gitignore 
-├── _quarto.yml 
-├── index.qmd 
-├── executive_summary.qmd
-├── analysis.qmd 
-├── analysis_plan.qmd 
-├── decision_making.qmd 
-├── data_codebooks.qmd 
-├── data_diagram.qmd 
+my_project_site:
+
+├── R/\
+├── \_site/\
+├── fonts/\
+├── img/\
+├── styles.css\
+├── .gitignore\
+├── \_quarto.yml\
+├── index.qmd\
+├── executive_summary.qmd\
+├── analysis.qmd\
+├── analysis_plan.qmd\
+├── decision_making.qmd\
+├── data_codebooks.qmd\
+├── data_diagram.qmd\
 └── contact.qmd
 
 ## Quarto Files Included
