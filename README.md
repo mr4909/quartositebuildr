@@ -49,7 +49,8 @@ You’ll be prompted to confirm creation before anything is written.
 
 Running the function will generate a folder like this:
 
-my_project_site/ ├── R/  
+my_project_site/ 
+├── R/  
 ├── \_site/  
 ├── fonts/  
 ├── img/  
@@ -78,14 +79,6 @@ section text:
 - data_codebooks.qmd: Codebooks and definitions
 - data_diagram.qmd: Data flow diagrams and linkages
 - contact.qmd: Team contacts
-
-## Assets
-
-The package includes:
-
-- Font: Franklin Gothic Book (for styling)
-- Logo: code_for_america_black.jpg
-- Favicon: favicon.png
 
 These are copied automatically into the appropriate folders.
 
